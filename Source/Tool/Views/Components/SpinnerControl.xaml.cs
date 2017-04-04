@@ -31,7 +31,7 @@ namespace AlekseyNagovitsyn.BuildVision.Tool.Views.Components
         #region FormattedValue property
 
         /// <summary>
-        /// Dependency property identifier for the formatted value with limited 
+        /// Dependency property identifier for the formatted value with limited
         /// write access to the underlying read-only dependency property:  we
         /// can only use SetValue on this, not on the property itself.
         /// </summary>
@@ -93,7 +93,7 @@ namespace AlekseyNagovitsyn.BuildVision.Tool.Views.Components
                 ));
 
         /// <summary>
-        /// If the value changes, update the text box that displays the Value 
+        /// If the value changes, update the text box that displays the Value
         /// property to the consumer.
         /// </summary>
         /// <param name="obj"></param>
@@ -223,7 +223,7 @@ namespace AlekseyNagovitsyn.BuildVision.Tool.Views.Components
         #region Default values
 
         /// <summary>
-        /// Define the min, max and starting value, which we then expose 
+        /// Define the min, max and starting value, which we then expose
         /// as dependency properties.
         /// </summary>
         private const Decimal DefaultMinimumValue = 0,
@@ -287,7 +287,7 @@ namespace AlekseyNagovitsyn.BuildVision.Tool.Views.Components
             CommandManager.RegisterClassCommandBinding(typeof(SpinnerControl), new CommandBinding(IncreaseCommand, OnIncreaseCommand));
             CommandManager.RegisterClassCommandBinding(typeof(SpinnerControl), new CommandBinding(DecreaseCommand, OnDecreaseCommand));
 
-            //  lastly bind some inputs:  i.e. if the user presses up/down arrow 
+            //  lastly bind some inputs:  i.e. if the user presses up/down arrow
             //  keys, call the appropriate commands.
             CommandManager.RegisterClassInputBinding(typeof(SpinnerControl), new InputBinding(IncreaseCommand, new KeyGesture(Key.Up)));
             CommandManager.RegisterClassInputBinding(typeof(SpinnerControl), new InputBinding(IncreaseCommand, new KeyGesture(Key.Right)));
