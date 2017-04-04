@@ -42,8 +42,8 @@ namespace AlekseyNagovitsyn.BuildVision.Helpers
 
         #region Clipboard WinAPI
 
-        #pragma warning disable 169
-        #pragma warning disable 414
+#pragma warning disable 169
+#pragma warning disable 414
         // ReSharper disable InconsistentNaming, UnusedMember.Local, NotAccessedField.Local
 
         [DllImport("user32.dll", SetLastError = true)]
@@ -86,8 +86,8 @@ namespace AlekseyNagovitsyn.BuildVision.Helpers
 
         private struct POINT
         {
-            public int x;
-            public int y;
+            public int x => 0;
+            public int y => 0;
         }
 
         private struct DROPFILES
@@ -117,7 +117,7 @@ namespace AlekseyNagovitsyn.BuildVision.Helpers
             {
                 int intChar;
                 for (intChar = 0; intChar < strFiles[intFile].Length; intChar++)
-                    bData[intPos++] = (byte) strFiles[intFile][intChar];
+                    bData[intPos++] = (byte)strFiles[intFile][intChar];
                 bData[intPos++] = 0;
             }
             bData[intPos] = 0; // Terminating double zero
